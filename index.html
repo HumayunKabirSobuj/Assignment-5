@@ -73,7 +73,7 @@
                     </h1>
                     <p class="mb-5">"Experience PH Bus Paribohon: Reliable, Safe, and Comfortable Transportation.
                         Connecting Communities with Seamless Service. Book Now for Your Hassle-Free Journey!"</p>
-                    <button class="btn font-bold text-xl text-[#030708] bg-[#1DD100] rounded-xl border-none">Buy
+                    <button onclick="buyTicket()" class="btn font-bold text-xl text-[#030708] bg-[#1DD100] rounded-xl border-none">Buy
                         Tickets</button>
                 </div>
             </div>
@@ -129,7 +129,7 @@
 
         <!-- P.H Paribahan section start -->
 
-        <section class="bg-[#F7F8F8]">
+        <section id="ph"  class="bg-[#F7F8F8]">
 
             <h1 class="text-center text-[#030712] text-4xl font-bold mb-6">P.H Paribahan</h1>
             <p class="text-center text-lg font-normal text-[#030712] text-opacity-75 lg:mb-12 md:mb-9 mb-7">Yes, you can
@@ -161,7 +161,7 @@
 
                             <button class="btn">
                                 <img src="images/seat-green.png" alt="">
-                                <p class="text-lg font-medium text-[#1DD100]"><span>8</span> Seats left</p>
+                                <p class="text-lg font-medium text-[#1DD100]"><span id="left-seats">8</span> Seats left</p>
                             </button>
                         </div>
                     </div>
@@ -262,19 +262,32 @@
 
                     <div class="flex items-center justify-between mb-6">
                         <h2 class="text-2xl font-medium text-[#030712] text-opacity-50">A</h2>
-                        <button class="text-2xl btn font-medium text-[#030712] text-opacity-50 A1 ">A1</button>
-                        <button class="text-2xl btn font-medium text-[#030712] text-opacity-50 A2 lg:mr-20 ">A2</button>
-                        <button
-                            class="text-2xl btn font-medium text-[#030712] text-opacity-50 A3  lg:ml-20 ">A3</button>
-                        <button class="text-2xl btn font-medium text-[#030712] text-opacity-50 A4">A4</button>
+                        <button id="A1 "
+                            class="seat text-2xl btn font-medium text-[#030712] text-opacity-50 ">A1</button>
+
+                        <button id="A2"
+                            class="seat text-2xl btn font-medium text-[#030712] text-opacity-50  lg:mr-20 ">A2</button>
+
+                        <button id="A3"
+                            class="seat text-2xl btn font-medium text-[#030712] text-opacity-50   lg:ml-20 ">A3</button>
+
+                        <button id="A4"
+                            class=" seat text-2xl btn font-medium text-[#030712] text-opacity-50 ">A4</button>
                     </div>
                     <!-- B section -->
                     <div class="flex items-center justify-between mb-6">
                         <h2 class="text-2xl font-medium text-[#030712] text-opacity-50">B</h2>
-                        <button class="text-2xl btn font-medium text-[#030712] text-opacity-50 B1 ">B1</button>
-                        <button class="text-2xl btn font-medium text-[#030712] text-opacity-50 B2 lg:mr-20 ">B2</button>
-                        <button class="text-2xl btn font-medium text-[#030712] text-opacity-50 B3 lg:ml-20 ">B3</button>
-                        <button class="text-2xl btn font-medium text-[#030712] text-opacity-50 B4">B4</button>
+                        <button id="B1"
+                            class=" seat text-2xl btn font-medium text-[#030712] text-opacity-50  ">B1</button>
+
+                        <button id="B2"
+                            class=" seat text-2xl btn font-medium text-[#030712] text-opacity-50  lg:mr-20 ">B2</button>
+
+                        <button id="B3 "
+                            class=" seat text-2xl btn font-medium text-[#030712] text-opacity-50  lg:ml-20 ">B3</button>
+
+                        <button id="B4"
+                            class=" seat text-2xl btn font-medium text-[#030712] text-opacity-50 ">B4</button>
                     </div>
 
 
@@ -298,7 +311,7 @@
                         <img src="images/Line1.png " alt="" class="mb-6">
                         <div class="rounded-xl bg-[#F7F8F8] p-5">
                             <div class="flex justify-between">
-                                <p class="text-[#030712] text-lg font-medium">Seat<span
+                                <p class="text-[#030712] text-lg font-medium">Seat<span id="selected-seat"
                                         class="text-white bg-[#1DD100] text-lg font-medium">0</span></p>
                                 <p class="text-[#030712] text-lg font-medium">Class</p>
                                 <p class="text-[#030712] text-lg font-medium">Price</p>
@@ -316,7 +329,8 @@
 
                             <label class="input input-bordered flex items-center justify-between gap-2 mt-5">
                                 <input type="text" class="grow" placeholder="Have any coupon?" />
-                                <button class="btn text-white text-lg font-semibold bg-[#1DD100] rounded-lg ">Apply</button>
+                                <button
+                                    class="btn text-white text-lg font-semibold bg-[#1DD100] rounded-lg ">Apply</button>
                             </label>
 
                             <div class="flex justify-between my-5 ">
@@ -324,7 +338,8 @@
                                 <h2 class="text-lg font-medium">BDT <span>0000</span></h2>
                             </div>
 
-                            <button class="btn w-full text-2xl font-extrabold text-white bg-[#1DD100] rounded-2xl	mb-5">Next</button>
+                            <button
+                                class="btn w-full text-2xl font-extrabold text-white bg-[#1DD100] rounded-2xl	mb-5">Next</button>
                             <div class="flex justify-between items-center">
                                 <p class="text-lg text-[#030712] text-opacity-60 underline">Terms and Conditions</p>
                                 <p class="text-lg text-[#030712] text-opacity-60 underline">Cancellation Policy</p>
@@ -352,6 +367,8 @@
 
 
     </footer>
+
+    <script src="js/index.js"></script>
 
 </body>
 
