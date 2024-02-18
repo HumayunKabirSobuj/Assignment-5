@@ -23,12 +23,14 @@ for (const seat of seats) {
                 const p=document.createElement('p');
                 const h1=document.createElement('h1');
                 const h2=document.createElement('h2');
+                
                 p.innerText=seatValue;
                 h1.innerText="Economoy"
                 h2.innerText=550;
                 titleContainer.appendChild(p);
                 titleContainer.appendChild(h1);
                 titleContainer.appendChild(h2);
+                
                 selectedSeat++;
             }
             else {
