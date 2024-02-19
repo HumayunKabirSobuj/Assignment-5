@@ -74,10 +74,8 @@ function applyCupon() {
         inputAndButton.classList.add('hidden');
     }
     else{
-        alert('Enter valid Coupon Code !!!!')
+        alert('Enter valid Coupon Code !!')
     }
-
-
 }
 
 
