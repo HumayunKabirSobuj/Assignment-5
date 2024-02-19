@@ -6,7 +6,7 @@ function buyTicket() {
 }
 
 let selectedSeat = 0;
-let seatLeft = 8;
+let seatLeft = 40;
 const maxSeat = 4;
 const perTicketPrice = 550;
 const seats = document.getElementsByClassName('seat');
