@@ -25,8 +25,8 @@ for (const seat of seats) {
         p.innerText = seatValue;
         h1.innerText = "Economoy"
         h2.innerText = 550;
-        price = clickSeat.innerText * perTicketPrice + 550; 
-        price2=price-perTicketPrice;
+        price = clickSeat.innerText * perTicketPrice + 550;
+        price2 = price - perTicketPrice;
         if (selectedSeat < maxSeat || seat.classList.contains('bg-[#1DD100]')) {
             if (!seat.classList.contains('bg-[#1DD100]')) {
                 seat.classList.add('bg-[#1DD100]');
@@ -35,20 +35,15 @@ for (const seat of seats) {
                 titleContainer.appendChild(h1);
                 titleContainer.appendChild(h2);
                 document.getElementById('total-price').innerText = price.toFixed(2);
-
             }
             else {
 
                 seat.classList.remove('bg-[#1DD100]');
-                
-
                 titleContainer.innerHTML = '';
-
                 clickSeat.innerText = selectedSeat;
-                document.getElementById('total-price').innerText =price-550;
+                price2 = clickSeat.innerText * perTicketPrice - 550;
+                document.getElementById('total-price').innerText = price2;
                 selectedSeat--;
-
-
             }
             clickSeat.innerText = selectedSeat;
             leftSeat.innerText = seatLeft - selectedSeat;
@@ -57,6 +52,34 @@ for (const seat of seats) {
 
     });
 };
+
+
+
+function applyCupon() {
+    const inputCupon = document.getElementById('input-Cupon');
+    
+    const grandTotal=document.getElementById('grand-total');
+    const inputAndButton=document.getElementById('input-and-button');
+    // console.log(inputCupon.value);
+    if(inputCupon.value === 'NEW15'){
+        discount=document.getElementById('total-price').innerText*0.15;
+        grandTotalPrice=document.getElementById('total-price').innerText-discount;
+        grandTotal.innerText=grandTotalPrice;
+        inputAndButton.classList.add('hidden');
+    }
+    else if(inputCupon.value === 'Couple 20'){
+        discount=document.getElementById('total-price').innerText*0.20;
+        grandTotalPrice=document.getElementById('total-price').innerText-discount;
+        grandTotal.innerText=grandTotalPrice;
+        inputAndButton.classList.add('hidden');
+    }
+    else{
+        alert('Enter valid Coupon Code !!!!')
+    }
+
+
+}
+
 
 
 

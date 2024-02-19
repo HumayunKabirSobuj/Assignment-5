@@ -337,15 +337,15 @@
 
                             <!-- cuppon input field -->
 
-                            <label class="input input-bordered flex items-center justify-between gap-2 mt-5">
-                                <input type="text" class="grow" placeholder="Have any coupon?" />
-                                <button
+                            <label id="input-and-button" class=" input input-bordered flex items-center justify-between gap-2 mt-5">
+                                <input id="input-Cupon" type="text" class="grow" placeholder="Have any coupon?" />
+                                <button onclick="applyCupon()" id="cuppon-apply"
                                     class="btn text-white text-lg font-semibold bg-[#1DD100] rounded-lg ">Apply</button>
                             </label>
 
                             <div class="flex justify-between my-5 ">
-                                <h2 class="text-lg font-medium">Total Price</h2>
-                                <h2 class="text-lg font-medium">BDT <span>0000</span></h2>
+                                <h2 class="text-lg font-medium">Grand Total</h2>
+                                <h2 class="text-lg font-medium">BDT <span id="grand-total">0000</span></h2>
                             </div>
 
                             <button
